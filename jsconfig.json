@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@utils/*": ["src/utils/*"],
+      "@store/*": ["src/store/*"],
+      "@pages/*": ["src/pages/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@config/*": ["src/config/*"],
+      "@assets/*": ["src/assets/*"],
+      "@mixins/*": ["src/mixins/*"],
+      "@constants/*": ["src/constants/*"],
+      "@__mocks__/*": ["src/__mocks__/*"],
+      "@__tests__/*": ["src/__tests__/*"],
+      "@components/*": ["src/components/*"]
+    }
+  },
+  "exclude": ["node_modules", "build"]
+}
