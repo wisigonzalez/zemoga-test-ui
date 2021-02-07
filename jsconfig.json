@@ -9,6 +9,7 @@
       "@config/*": ["src/config/*"],
       "@assets/*": ["src/assets/*"],
       "@mixins/*": ["src/mixins/*"],
+      "@graphql/*": ["src/graphql/*"],
       "@constants/*": ["src/constants/*"],
       "@__mocks__/*": ["src/__mocks__/*"],
       "@__tests__/*": ["src/__tests__/*"],
