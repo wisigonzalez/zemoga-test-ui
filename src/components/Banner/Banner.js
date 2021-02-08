@@ -7,7 +7,7 @@ import BannerContainer from '@components/BannerContainer/BannerContainer';
 const Banner = ({ banner, closingBar }) => {
   const { image, opinionCard } = banner;
   const { title, days, subtitle } = closingBar;
-  
+
   return (
     <BannerContainer image={image}>
       <OpinionCard opinionCard={opinionCard} />

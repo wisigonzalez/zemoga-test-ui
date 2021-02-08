@@ -1,27 +1,27 @@
 import styled from 'styled-components';
 
 export default styled.div`
-  position: relative;
-  width: fill-available;
-  height: 700px;
-  background: black;
+  height: 740px;
   display: flex;
-  justify-content: flex-start;
+  position: relative;
   align-items: center;
+  width: fill-available;
+  justify-content: flex-start;
   padding: ${({ theme }) => theme.utils.spacing(10, 0)};
+
   :before {
-    content: '';
-    position: absolute;
-    height: 300px;
-    width: 100%;
-    right: 0;
     top: 0;
     left: 0;
+    right: 0;
+    content: '';
+    width: 100%;
+    height: 300px;
+    position: absolute;
     background: linear-gradient(
       0,
       transparent,
       ${({ theme }) => theme.colors.bg.tertiary80}
     );
-    z-index: 1;
+    z-index: ${({ theme }) => theme.zIndex.forward};
   }
 `;
