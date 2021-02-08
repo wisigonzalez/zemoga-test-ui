@@ -2,7 +2,7 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 
 import Footer from '@components/Footer/Footer';
-import NavBar from '@components/Navbar/NavBar';
+import NavBar from '@components/NavBar/NavBar';
 
 const Layout = ({ accessBar, children, footer }) => {
   const { title } = accessBar;
@@ -30,14 +30,14 @@ const Layout = ({ accessBar, children, footer }) => {
 Layout.propTypes = {
   accessBar: PropTypes.shape({
     title: PropTypes.string,
-    links: PropTypes.shape({})
+    links: PropTypes.arrayOf(PropTypes.shape({}))
   }).isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired,
   footer: PropTypes.shape({
-    links: PropTypes.shape({}),
+    links: PropTypes.arrayOf(PropTypes.shape({})),
     followText: PropTypes.string,
     socialNetwork: PropTypes.shape({})
   }).isRequired
