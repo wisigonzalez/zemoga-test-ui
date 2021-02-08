@@ -5,7 +5,8 @@ const homeSerializer = async (request) => {
 
   return {
     header: {
-      accessBar: page[0].content
+      accessBar: page[0].content,
+      banner: page[1].content
     },
     footer: page[3].content
   };
