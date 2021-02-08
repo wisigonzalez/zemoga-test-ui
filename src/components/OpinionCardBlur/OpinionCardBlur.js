@@ -5,10 +5,10 @@ import {
   StyledTitle,
   StyledSubtitle,
   StyledMoreInfo,
+  StyledQuestion,
   StyledContainer,
   StyledDescription,
-  StyledCallToAction,
-  StyledMoreInfoLogo
+  StyledMoreInfoIcon
 } from './OpinionCardBlur.styled';
 
 import Link from '@components/Link/Link';
@@ -24,7 +24,7 @@ const OpinionCardBlur = ({ title, subtitle, description, link, question }) => {
           <StyledSubtitle>{subtitle}</StyledSubtitle>
           <StyledDescription>{description}</StyledDescription>
           <StyledMoreInfo>
-            <StyledMoreInfoLogo>
+            <StyledMoreInfoIcon>
               <Image
                 priority
                 quality={100}
@@ -33,10 +33,10 @@ const OpinionCardBlur = ({ title, subtitle, description, link, question }) => {
                 objectFit='contain'
                 src={link.icon.url}
               />
-            </StyledMoreInfoLogo>
+            </StyledMoreInfoIcon>
             <Link href={link.url}>{link.text}</Link>
           </StyledMoreInfo>
-          <StyledCallToAction>{question}</StyledCallToAction>
+          <StyledQuestion>{question}</StyledQuestion>
         </BlurCard>
         <OpinionCardThumbs />
       </StyledContainer>

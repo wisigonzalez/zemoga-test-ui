@@ -9,10 +9,9 @@ export const StyledNavbar = styled.nav`
   position: absolute;
   background: transparent;
   justify-content: space-between;
-  padding-top: ${({ theme }) => theme.utils.spacing(8)};
-  color: ${({ theme }) => theme.colors.font.secondary};
   z-index: ${({ theme }) => theme.zIndex.fixed};
-
+  color: ${({ theme }) => theme.colors.font.secondary};
+  padding-top: ${({ theme }) => theme.utils.spacing(8)};
 `;
 
 export const StyledBrand = styled.div`

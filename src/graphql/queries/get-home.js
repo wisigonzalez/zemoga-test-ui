@@ -32,6 +32,7 @@ export default `query Home($locales: [Locale!]!) {
             }
             ...on ZeClosingBar {
                 title
+                days
                 subtitle
             }
             ... on ZeFooter {

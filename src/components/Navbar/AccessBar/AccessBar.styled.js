@@ -82,5 +82,4 @@ export const StyledCloseIcon = styled.div`
   ${({ theme }) => theme.breakpoints.desktop} {
     display: none;
   }
-
 `;
