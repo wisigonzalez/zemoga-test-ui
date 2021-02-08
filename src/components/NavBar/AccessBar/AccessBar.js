@@ -49,7 +49,7 @@ const AccessBar = ({ links }) => {
       <StyledAccessBar opened={opened}>
         {memoizedLinks}
         <StyledAccessBarLink key='access-bar-item--search-icon`'>
-          <Link href='https://search.google.com/search-console/welcome?hl=es'>
+          <Link href='https://google.com/'>
             <StyledSearchIcon>
               <Image
                 quality={100}
