@@ -1,65 +1,80 @@
-import Head from 'next/head';
-import styles from '../../styles/Home.module.css';
+import PropTypes from 'prop-types';
 
-export default function Home() {
+import App from '@config/app.js';
+import Votes from '@components/Votes/Votes';
+import Popup from '@components/Popup/Popup';
+import Layout from '@components/Layout/Layout';
+import Banner from '@components/Banner/Banner';
+import VoteList from '@components/VoteList/VoteList';
+import FancyLine from '@components/FancyLine/FancyLine';
+import { cmsLocales } from '@config/constants/languages';
+import SecondaryBanner from '@components/SecondaryBanner/SecondaryBanner';
+
+const fetchHomeData = async (currentLocale) => {
+  const { cms } = App.getInstance();
+  const [homeData] = await Promise.all([cms.getHome(currentLocale)]);
+
+  return {
+    props: {
+      homeData: {
+        ...homeData
+      }
+    }
+  };
+};
+
+const Home = ({ homeData }) => {
+  const { header, popup, votes, secondaryBanner, footer } = homeData;
+  const { voteCards } = votes.votesList;
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href='https://nextjs.org'>Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href='https://nextjs.org/docs' className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href='https://nextjs.org/learn' className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href='https://github.com/vercel/next.js/tree/master/examples'
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href='https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{' '}
-          <img src='/vercel.svg' alt='Vercel Logo' className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+    <Layout accessBar={header.accessBar} footer={footer}>
+      <Banner banner={header.banner} closingBar={header.closingBar} />
+      <Popup
+        title={popup.title}
+        subtitle={popup.subtitle}
+        description={popup.description}
+      />
+      <Votes title={votes.title}>
+        <VoteList votes={voteCards} />
+      </Votes>
+      <SecondaryBanner
+        image={secondaryBanner.image}
+        title={secondaryBanner.title}
+        link={secondaryBanner.link}
+      />
+      <FancyLine />
+    </Layout>
   );
-}
+};
+
+export const getServerSideProps = async () => fetchHomeData(cmsLocales.en);
+
+Home.propTypes = {
+  homeData: PropTypes.shape({
+    header: PropTypes.shape({
+      accessBar: PropTypes.shape({}),
+      banner: PropTypes.shape({}),
+      closingBar: PropTypes.shape({})
+    }),
+    popup: PropTypes.shape({
+      title: PropTypes.string,
+      subtitle: PropTypes.string,
+      description: PropTypes.string
+    }),
+    votes: PropTypes.shape({
+      title: PropTypes.string,
+      votesList: PropTypes.shape({
+        voteCards: PropTypes.arrayOf(PropTypes.shape({}))
+      })
+    }),
+    secondaryBanner: PropTypes.shape({
+      image: PropTypes.PropTypes.shape({}),
+      title: PropTypes.string,
+      link: PropTypes.PropTypes.shape({})
+    }),
+    footer: PropTypes.shape({})
+  }).isRequired
+};
+
+export default Home;
