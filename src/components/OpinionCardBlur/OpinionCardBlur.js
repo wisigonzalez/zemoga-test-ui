@@ -15,34 +15,32 @@ import Link from '@components/Link/Link';
 import BlurCard from '@components/BlurCard/BlurCard';
 import OpinionCardThumbs from '@components/OpinionCardThumbs/OpinionCardThumbs';
 
-const OpinionCardBlur = ({ title, subtitle, description, link, question }) => {
-  return (
-    <>
-      <StyledContainer>
-        <BlurCard>
-          <StyledTitle>{title}</StyledTitle>
-          <StyledSubtitle>{subtitle}</StyledSubtitle>
-          <StyledDescription>{description}</StyledDescription>
-          <StyledMoreInfo>
-            <StyledMoreInfoIcon>
-              <Image
-                priority
-                quality={100}
-                layout='fill'
-                loading='eager'
-                objectFit='contain'
-                src={link.icon.url}
-              />
-            </StyledMoreInfoIcon>
-            <Link href={link.url}>{link.text}</Link>
-          </StyledMoreInfo>
-          <StyledQuestion>{question}</StyledQuestion>
-        </BlurCard>
-        <OpinionCardThumbs />
-      </StyledContainer>
-    </>
-  );
-};
+const OpinionCardBlur = ({ title, subtitle, description, link, question }) => (
+  <>
+    <StyledContainer>
+      <BlurCard>
+        <StyledTitle>{title}</StyledTitle>
+        <StyledSubtitle>{subtitle}</StyledSubtitle>
+        <StyledDescription>{description}</StyledDescription>
+        <StyledMoreInfo>
+          <StyledMoreInfoIcon>
+            <Image
+              priority
+              quality={100}
+              layout='fill'
+              loading='eager'
+              objectFit='contain'
+              src={link.icon.url}
+            />
+          </StyledMoreInfoIcon>
+          <Link href={link.url}>{link.text}</Link>
+        </StyledMoreInfo>
+        <StyledQuestion>{question}</StyledQuestion>
+      </BlurCard>
+      <OpinionCardThumbs />
+    </StyledContainer>
+  </>
+);
 
 OpinionCardBlur.propTypes = {
   title: PropTypes.string.isRequired,

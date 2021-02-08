@@ -4,9 +4,7 @@ import CmsLoader from './boot-loaders/cms.loader';
 
 const loadersServer = [CmsLoader];
 
-const loadersClient = [
-  ...loadersServer
-];
+const loadersClient = [...loadersServer];
 
 class App {
   static boot() {

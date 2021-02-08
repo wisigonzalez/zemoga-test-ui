@@ -2,20 +2,20 @@ import PropTypes from 'prop-types';
 
 import AccessBar from './AccessBar/AccessBar';
 import Container from '@components/Container/Container';
-import { StyledNavbar, StyledBrand } from './Navbar.styled';
+import { StyledNavBar, StyledBrand } from './NavBar.styled';
 
-const Navbar = ({ title, links }) => (
+const NavBar = ({ title, links }) => (
   <Container>
-    <StyledNavbar>
+    <StyledNavBar>
       <StyledBrand>{title}</StyledBrand>
       <AccessBar links={links} />
-    </StyledNavbar>
+    </StyledNavBar>
   </Container>
 );
 
-Navbar.propTypes = {
+NavBar.propTypes = {
   title: PropTypes.string.isRequired,
   links: PropTypes.arrayOf(PropTypes.shape({})).isRequired
 };
 
-export default Navbar;
+export default NavBar;

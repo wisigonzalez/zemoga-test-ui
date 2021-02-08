@@ -18,7 +18,7 @@ export const StyledTitle = styled.div`
   color: ${({ theme }) => theme.colors.font.secondary};
   padding-right: ${({ theme }) => theme.utils.spacing(2)};
   background-color: ${({ theme }) => theme.colors.bg.tertiary30};
-  
+
   :after {
     width: 0;
     height: 0;

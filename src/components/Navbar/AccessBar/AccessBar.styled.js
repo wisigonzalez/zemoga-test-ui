@@ -35,7 +35,7 @@ export const StyledAccessBarLink = styled.li`
     color: ${({ theme }) => theme.colors.font.brand};
   }
   margin: ${({ theme }) => theme.utils.spacing(10, 5)};
-  
+
   ${({ theme }) => theme.breakpoints.tablet} {
     margin: ${({ theme }) => theme.utils.spacing(10, 10)};
   }
@@ -50,7 +50,7 @@ export const StyledSearchIcon = styled.div`
   width: 25px;
   height: 25px;
   position: relative;
-  
+
   ${({ theme }) => theme.breakpoints.tablet} {
     margin-left: auto;
   }
@@ -62,11 +62,10 @@ export const StyledAccessBarMobile = styled.div`
   cursor: pointer;
   position: relative;
   display: ${({ opened }) => (opened ? 'none' : 'block')};
-  
+
   ${({ theme }) => theme.breakpoints.desktop} {
     display: none;
   }
-  
 `;
 
 export const StyledCloseIcon = styled.div`
@@ -78,7 +77,7 @@ export const StyledCloseIcon = styled.div`
   position: fixed;
   z-index: ${({ theme }) => theme.zIndex.super};
   display: ${({ opened }) => (opened ? 'block' : 'none')};
-  
+
   ${({ theme }) => theme.breakpoints.desktop} {
     display: none;
   }

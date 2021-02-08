@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledNavbar = styled.nav`
+export const StyledNavBar = styled.nav`
   top: 0;
   left: 0;
   right: 0;

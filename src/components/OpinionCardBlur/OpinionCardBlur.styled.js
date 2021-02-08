@@ -27,14 +27,14 @@ export const StyledMoreInfo = styled.div`
   align-items: center;
   font-size: ${({ theme }) => theme.font.size.paragraph2};
   margin-bottom: ${({ theme }) => theme.utils.spacing(7)};
-  
+
   > a {
     color: inherit;
     position: relative;
     text-decoration: none;
     margin-left: ${({ theme }) => theme.utils.spacing(2)};
   }
-  
+
   > a:after {
     left: 0;
     content: '';

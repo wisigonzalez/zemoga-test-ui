@@ -23,7 +23,7 @@ export const StyledLogo = styled.div`
 export const StyledLinks = styled.ul`
   width: auto;
   font-weight: normal;
-  
+
   ${({ theme }) => theme.breakpoints.tablet} {
     height: 100%;
     display: flex;
@@ -35,7 +35,7 @@ export const StyledFollowUs = styled.small`
   font-weight: 300;
   margin: ${({ theme }) => theme.utils.spacing(10, 0, 2, 0)};
   font-size: ${({ theme }) => theme.font.size.caption};
-  
+
   ${({ theme }) => theme.breakpoints.tablet} {
     margin: 0;
   }
@@ -55,7 +55,7 @@ export const StyledContainer = styled.div`
 `;
 export const StyledSocialNetworks = styled.ul`
   width: auto;
-  
+
   ${({ theme }) => theme.breakpoints.tablet} {
     height: 100%;
     display: flex;

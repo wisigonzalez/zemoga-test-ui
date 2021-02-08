@@ -40,6 +40,34 @@ export default `query Home($locales: [Locale!]!) {
                 subtitle
                 description
             }
+            ...on ZeVoteList {
+                voteCards {
+                    image {
+                        fileName
+                        url
+                    }
+                    title
+                    subtitle
+                    complement
+                    description
+                    voteNow
+                    voteAgain
+                    message
+                    likeVotes
+                    dislikeVotes
+                }
+            }
+            ... on ZeSecondaryBanner {
+                image {
+                    fileName
+                    url
+                }
+                title
+                link {
+                    text
+                    url
+                }
+            }
             ... on ZeFooter {
                 links {
                     text

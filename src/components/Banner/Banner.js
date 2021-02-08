@@ -17,8 +17,17 @@ const Banner = ({ banner, closingBar }) => {
 };
 
 Banner.propTypes = {
-  banner: PropTypes.shape({}).isRequired,
-  closingBar: PropTypes.shape({}).isRequired
+  banner: PropTypes.shape({
+    image: PropTypes.shape({
+      fileName: PropTypes.string,
+      url: PropTypes.string
+    }),
+    opinionCard: PropTypes.shape({})
+  }).isRequired,
+  closingBar: PropTypes.shape({
+    title: PropTypes.string,
+    days: PropTypes.number,
+    subtitle: PropTypes.string
+  }).isRequired
 };
-
 export default Banner;

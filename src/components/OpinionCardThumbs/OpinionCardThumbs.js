@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import PropTypes from 'prop-types';
 
 import {
   StyledIcon,
@@ -7,8 +6,8 @@ import {
   StyledContainerIcon
 } from './OpinionCardThumbs.styled';
 
-const OpinionCardThumbs = () => {
-  return (
+const OpinionCardThumbs = () => (
+  <>
     <StyledContainer>
       <StyledContainerIcon type='like'>
         <StyledIcon>
@@ -18,7 +17,7 @@ const OpinionCardThumbs = () => {
             layout='fill'
             objectFit='contain'
             priority
-            src={`/icons/like.svg`}
+            src='/icons/like.svg'
           />
         </StyledIcon>
       </StyledContainerIcon>
@@ -30,12 +29,12 @@ const OpinionCardThumbs = () => {
             layout='fill'
             objectFit='contain'
             priority
-            src={`/icons/dislike.svg`}
+            src='/icons/dislike.svg'
           />
         </StyledIcon>
       </StyledContainerIcon>
     </StyledContainer>
-  );
-};
+  </>
+);
 
 export default OpinionCardThumbs;

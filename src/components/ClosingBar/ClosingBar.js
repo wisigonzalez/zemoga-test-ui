@@ -5,7 +5,7 @@ import {
   StyledTitle,
   StyledSubtitle,
   StyledContainer,
-  StyledTimeContainer,
+  StyledTimeContainer
 } from './ClosingBar.styled';
 
 const ClosingBar = ({ title, days, subtitle }) => (

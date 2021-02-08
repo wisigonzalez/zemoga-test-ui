@@ -1,5 +1,4 @@
 const homeSerializer = async (request) => {
-  console.log('REQUEST', request);
   const { zePages } = (await request) || {};
   const page = zePages[0].sections;
 
@@ -10,7 +9,9 @@ const homeSerializer = async (request) => {
       closingBar: page[2].content
     },
     popup: page[3].content,
-    footer: page[4].content
+    votes: { title: page[4].title, votesList: page[4].content },
+    secondaryBanner: page[5].content,
+    footer: page[6].content
   };
 };
 

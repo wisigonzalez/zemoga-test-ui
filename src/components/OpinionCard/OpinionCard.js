@@ -22,7 +22,13 @@ const OpinionCard = ({ opinionCard }) => {
 };
 
 OpinionCard.propTypes = {
-  opinionCard: PropTypes.shape({}).isRequired
+  opinionCard: PropTypes.shape({
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
+    description: PropTypes.string,
+    link: PropTypes.shape({}),
+    question: PropTypes.string
+  }).isRequired
 };
 
 export default OpinionCard;

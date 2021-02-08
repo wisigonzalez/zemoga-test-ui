@@ -15,7 +15,7 @@ export const StyledContainerIcon = styled.div`
   justify-content: center;
   transition: ${({ theme }) => theme.transitions.button};
   background: ${({ theme, type }) => theme.colors.bg[`${type}70`]};
-  
+
   :hover {
     background: ${({ theme, type }) => theme.colors.bg[type]};
   }

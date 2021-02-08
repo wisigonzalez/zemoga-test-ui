@@ -17,13 +17,11 @@ const AccessBar = ({ links }) => {
 
   const memoizedLinks = useMemo(
     () =>
-      links.map((link, index) => {
-        return (
-          <StyledAccessBarLink key={`access-bar-item-${index}--${link.text}`}>
-            <Link href={link.url}>{link.text}</Link>
-          </StyledAccessBarLink>
-        );
-      }),
+      links.map((link, index) => (
+        <StyledAccessBarLink key={`access-bar-item-${index}--${link.text}`}>
+          <Link href={link.url}>{link.text}</Link>
+        </StyledAccessBarLink>
+      )),
     [links]
   );
   return (
@@ -50,7 +48,7 @@ const AccessBar = ({ links }) => {
       </StyledCloseIcon>
       <StyledAccessBar opened={opened}>
         {memoizedLinks}
-        <StyledAccessBarLink key={`access-bar-item--search-icon`}>
+        <StyledAccessBarLink key='access-bar-item--search-icon`'>
           <Link href='https://search.google.com/search-console/welcome?hl=es'>
             <StyledSearchIcon>
               <Image
