@@ -35,6 +35,11 @@ export default `query Home($locales: [Locale!]!) {
                 days
                 subtitle
             }
+            ...on ZePopup {
+                title
+                subtitle
+                description
+            }
             ... on ZeFooter {
                 links {
                     text

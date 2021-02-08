@@ -9,7 +9,8 @@ const homeSerializer = async (request) => {
       banner: page[1].content,
       closingBar: page[2].content
     },
-    footer: page[3].content
+    popup: page[3].content,
+    footer: page[4].content
   };
 };
 
