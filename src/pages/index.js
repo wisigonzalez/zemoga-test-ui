@@ -65,7 +65,7 @@ Home.propTypes = {
     votes: PropTypes.shape({
       title: PropTypes.string,
       votesList: PropTypes.shape({
-        voteCards: PropTypes.shape({})
+        voteCards: PropTypes.arrayOf(PropTypes.shape({}))
       })
     }),
     secondaryBanner: PropTypes.shape({
