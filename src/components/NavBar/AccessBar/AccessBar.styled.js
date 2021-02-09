@@ -11,7 +11,7 @@ export const StyledAccessBar = styled.ul`
   font-size: ${({ theme }) => theme.font.size.h6};
   padding-top: ${({ theme }) => theme.utils.spacing(5)};
   display: ${({ opened }) => (opened ? 'block' : 'none')};
-  background-color: ${({ theme }) => theme.colors.bg.tertiary};
+  background-color: ${({ theme }) => theme.colors.bg.like};
 
   ${({ theme }) => theme.breakpoints.tablet} {
     left: unset;
