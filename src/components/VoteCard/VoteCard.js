@@ -2,7 +2,7 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 
 import { StyledContent, StyledContainer } from './VoteCard.styled';
-import VoteCardContent from '@components/VoteCardContent/VoteCardContent';
+import VoteCardContent from '@components/VoteCard/VoteCardContent/VoteCardContent';
 import OpinionPercentage from '@components/OpinionPercentage/OpinionPercentage';
 
 const VoteCard = ({

@@ -1,34 +1,76 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Zemoga test ui
 
-## Getting Started
+Test ui repository >>> https://github.com/zemoga/ui-test
 
-First, run the development server:
+Markup page >>> https://s3-us-west-2.amazonaws.com/zemoga-files/ui/candidates-test/test-ui-v2.png
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+DEMO URL: https://zemoga-test-ui.wisigonzalez.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Stack
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Frontend
+  - [React.js](https://es.reactjs.org/)
+  - [Next.js](https://nextjs.org/)
+  - [Styled-components](https://styled-components.com/)
+  - [Jest](https://jestjs.io/)
+- Backend
+  - [GraphQL](https://firebase.google.com/docs)
+  - [GraphCMS](https://graphcms.com/)
+- Infrastructure
+  - [Vercel](https://vercel.com/dashboard)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Highlights
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Theme friendly
+- Internationalization (translates on CMS)
+- SSR (Server side rendering)
+- Unit testing
+- GraphQL
 
-## Learn More
+## Requeriments
 
-To learn more about Next.js, take a look at the following resources:
+- Node >= 12.0.0
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Local configuration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. yarn install
+2. yarn dev
+3. go to `http://localhost:3000/`
+4. see my work
 
-## Deploy on Vercel
+## Folder structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Explanation of hierarchies in files and layers.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    zemoga-test-ui/
+      ├── public/
+      │   ├── fonts/                       # Fonts asset folder
+      │   ├── icons/                       # Icons asset folder
+      └── src/
+          ├── __mocks__/                   # Mock data for testing or markup page without integrations 
+          ├── __tests__/                   # Tests folder
+          ├── assets/                      # Core assets folder
+          |   ├── styles/                  
+          │   ├── core/                    # Core utils folder
+          |   ├── themes/                  # Core styles folder
+          ├── components/                  # Components folder
+          ├── config/
+          |   ├── boot-loaders/            # Boot loaders folder
+          |   ├── constants/               # Constants folder
+          ├── constants/                   # General constants folder
+          ├── graphql/                     # GraphQL folder
+          ├── hooks/                       # Custom hooks folder
+          ├── mixins/                      # Mixins folder
+          ├── pages/                       # Pages folder
+          └── utils/                       # General utils folder
+
+## Branches
+
+- `master`
+- `develop`
+- `feature/markup-page` >>> only markup
+- `feature/add-interactions` >>> with interactions
+
+# License
+
+MIT

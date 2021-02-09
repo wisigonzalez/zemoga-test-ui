@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import StyledContainer from './OpinionCard.styled';
 import Container from '@components/Container/Container';
-import OpinionCardBlur from '@components/OpinionCardBlur/OpinionCardBlur';
+import OpinionCardBlur from '@components/OpinionCard/OpinionCardBlur/OpinionCardBlur';
 
 const OpinionCard = ({ opinionCard }) => {
   const { title, subtitle, description, link, question } = opinionCard;

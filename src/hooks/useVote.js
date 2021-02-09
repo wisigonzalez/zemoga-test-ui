@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import App from '@config/app.js';
 
 const useVote = async (idValue, vote, likesVotes, dislikeVotes) => {
@@ -12,8 +14,6 @@ const useVote = async (idValue, vote, likesVotes, dislikeVotes) => {
       dislikeVotes: dislikes
     })
   ]);
-
-  console.log('vote sended');
 
   return true;
 };

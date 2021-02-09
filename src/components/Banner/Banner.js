@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import ClosingBar from '@components/ClosingBar/ClosingBar';
 import OpinionCard from '@components/OpinionCard/OpinionCard';
-import BannerContainer from '@components/BannerContainer/BannerContainer';
+import BannerContainer from '@components/Banner/BannerContainer/BannerContainer';
 
 const Banner = ({ banner, closingBar }) => {
   const { image, opinionCard } = banner;

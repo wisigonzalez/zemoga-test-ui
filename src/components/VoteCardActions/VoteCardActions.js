@@ -19,7 +19,9 @@ const VoteCardActions = ({
 
   const customOnClick = (value, idCard) => {
     if (value && thumbSelected) {
-      setVote(useVote(idCard, thumbSelected, likeVotes, dislikeVotes));
+      setVote(value);
+      /* eslint-disable-next-line */
+      useVote(idCard, thumbSelected, likeVotes, dislikeVotes);
       setTimeout(() => {
         router.reload();
       }, 2000);

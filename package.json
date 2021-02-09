@@ -12,8 +12,14 @@
     "test": "jest --config ./jest.config.js",
     "test-with-coverage": "node_modules/.bin/jest --config ./jest.config.js --coverage=true --maxWorkers=2 --silent"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wisigonzalez/zemoga-test-ui"
+  },
+  "author": "Jose Barrios",
+  "license": "MIT",
+  "homepage": "https://github.com/wisigonzalez/zemoga-test-ui#readme",
   "dependencies": {
-    "dayjs": "^1.9.7",
     "graphql-request": "^2.0.0",
     "next": "10.0.6",
     "prop-types": "^15.7.2",
