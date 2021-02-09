@@ -1,6 +1,6 @@
 export default {
   title: 'Votes',
-  voteList: {
+  votesList: {
     voteCards: [
       {
         image: {
@@ -15,8 +15,8 @@ export default {
         voteNow: 'Vote now',
         voteAgain: 'Vote again',
         message: 'Thank you for voting!',
-        likeVotes: 100,
-        dislikeVotes: 0
+        likeVotes: 64,
+        dislikeVotes: 36
       },
       {
         image: {
@@ -31,8 +31,8 @@ export default {
         voteNow: 'Vote now',
         voteAgain: 'Vote again',
         message: 'Thank you for voting!',
-        likeVotes: 0,
-        dislikeVotes: 100
+        likeVotes: 64,
+        dislikeVotes: 36
       },
       {
         image: {
@@ -47,8 +47,8 @@ export default {
         voteNow: 'Vote now',
         voteAgain: 'Vote again',
         message: 'Thank you for voting!',
-        likeVotes: 40,
-        dislikeVotes: 60
+        likeVotes: 64,
+        dislikeVotes: 36
       },
       {
         image: {

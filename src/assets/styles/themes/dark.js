@@ -32,7 +32,7 @@ export default {
       primary: colors.tundora,
       secondary: colors.white,
       tertiary: colors.black,
-      brand: colors.shamrock
+      brand: colors.yellowOrange
     }
   },
   boxShadows: {

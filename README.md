@@ -4,7 +4,7 @@ Test ui repository >>> https://github.com/zemoga/ui-test
 
 Markup page >>> https://s3-us-west-2.amazonaws.com/zemoga-files/ui/candidates-test/test-ui-v2.png
 
-DEMO URL >>> https://zemoga-test-ui.wisigonzalez.vercel.app/
+Demo url >>> https://zemoga-test-ui.wisigonzalez.vercel.app/
 
 ## Stack
 
@@ -47,10 +47,10 @@ Explanation of hierarchies in files and layers.
       │   ├── fonts/                       # Fonts asset folder
       │   ├── icons/                       # Icons asset folder
       └── src/
-          ├── __mocks__/                   # Mock data for testing or markup page without integrations 
+          ├── __mocks__/                   # Mock data for testing or markup page without integrations
           ├── __tests__/                   # Tests folder
           ├── assets/                      # Core assets folder
-          |   ├── styles/                  
+          |   ├── styles/
           │       ├── core/                # Core utils folder
           |       ├── themes/              # Core styles folder
           ├── components/                  # Components folder
@@ -68,8 +68,14 @@ Explanation of hierarchies in files and layers.
 
 - `master`
 - `develop`
-- `feature/markup-page` >>> only markup
-- `feature/add-interactions` >>> with interactions
+- `feature/markup-page` >>> markup with integrations
+- `feature/markup-page-without-integrations` >>> markup without integrations
+
+## Other details
+
+- Currently the voting action works using a reload function of nextjs. It would have been much better to use reactjs useEffect function to avoid page reloading and simulate realtime behavior. This I did not do due to lack of time.
+
+- The successful voting message does not work. This I did not do due to lack of time.
 
 # License
 
