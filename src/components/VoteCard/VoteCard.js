@@ -6,6 +6,7 @@ import VoteCardContent from '@components/VoteCardContent/VoteCardContent';
 import OpinionPercentage from '@components/OpinionPercentage/OpinionPercentage';
 
 const VoteCard = ({
+  id,
   image,
   title,
   subtitle,
@@ -21,6 +22,7 @@ const VoteCard = ({
       <Image layout='fill' loading='lazy' objectFit='cover' src={image.url} />
       <StyledContent>
         <VoteCardContent
+          id={id}
           title={title}
           subtitle={subtitle}
           complement={complement}
@@ -40,6 +42,7 @@ const VoteCard = ({
 );
 
 VoteCard.propTypes = {
+  id: PropTypes.string.isRequired,
   image: PropTypes.shape({
     fileName: PropTypes.string,
     url: PropTypes.string

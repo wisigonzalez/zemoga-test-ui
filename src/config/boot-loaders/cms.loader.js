@@ -1,6 +1,7 @@
 import Queries from '@graphql/queries';
-import { cmsLocales } from '@config/constants';
+import Mutations from '@graphql/mutations';
 import Serializers from '@graphql/serializers';
+import { cmsLocales } from '@config/constants';
 import { GraphQLClient } from 'graphql-request';
 
 class CmsLoader {
@@ -29,7 +30,11 @@ class CmsLoader {
         return graphQLClient.request(Queries[query], variables);
       }
     }));
-    App.cms = Object.assign({}, ...queriesRequests);
+    const mutationsRequests = Object.keys(Mutations).map((mutation) => ({
+      [mutation]: (variables = null) =>
+        graphQLClient.request(Mutations[mutation], variables)
+    }));
+    App.cms = Object.assign({}, ...queriesRequests, ...mutationsRequests);
   }
 }
 

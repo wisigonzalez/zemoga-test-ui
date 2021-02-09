@@ -1,4 +1,4 @@
-export default `query Home($locales: [Locale!]!) {
+export default `query GetHome($locales: [Locale!]!) {
   zePages(locales: $locales) {
     sections {
         title
@@ -42,6 +42,7 @@ export default `query Home($locales: [Locale!]!) {
             }
             ...on ZeVoteList {
                 voteCards {
+                    id
                     image {
                         fileName
                         url

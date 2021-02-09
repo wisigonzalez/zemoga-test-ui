@@ -12,6 +12,7 @@ import Thumb from '@components/Thumb/Thumb';
 import VoteCardActions from '@components/VoteCardActions/VoteCardActions';
 
 const VoteCardContent = ({
+  id,
   title,
   subtitle,
   complement,
@@ -37,13 +38,16 @@ const VoteCardContent = ({
       <VoteCardActions
         voteNow={voteNow}
         voteAgain={voteAgain}
-        previousVote={false}
+        id={id}
+        likeVotes={likeVotes}
+        dislikeVotes={dislikeVotes}
       />
     </StyledContainer>
   );
 };
 
 VoteCardContent.propTypes = {
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   complement: PropTypes.string.isRequired,

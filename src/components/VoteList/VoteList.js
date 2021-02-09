@@ -10,6 +10,7 @@ const VoteList = ({ votes }) => {
       votes.map(
         (
           {
+            id,
             image,
             title,
             subtitle,
@@ -24,6 +25,7 @@ const VoteList = ({ votes }) => {
         ) => (
           <StyledListItem key={`vote-list-item-${index}--${title}`}>
             <VoteCard
+              id={id}
               image={image}
               title={title}
               subtitle={subtitle}
