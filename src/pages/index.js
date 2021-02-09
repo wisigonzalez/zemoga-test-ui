@@ -1,27 +1,19 @@
 import PropTypes from 'prop-types';
 
-import App from '@config/app.js';
 import Votes from '@components/Votes/Votes';
 import Popup from '@components/Popup/Popup';
 import Layout from '@components/Layout/Layout';
 import Banner from '@components/Banner/Banner';
+import mockPopup from '@__mocks__/popup/popup';
+import mockVotes from '@__mocks__/votes/votes';
+import mockFooter from '@__mocks__/footer/footer';
+import mockBanner from '@__mocks__/banner/banner';
 import VoteList from '@components/VoteList/VoteList';
 import FancyLine from '@components/FancyLine/FancyLine';
-import { cmsLocales } from '@config/constants/languages';
+import mockAccessBar from '@__mocks__/accessBar/accessBar';
+import mockClosingBar from '@__mocks__/closingBar/closingBar';
 import SecondaryBanner from '@components/SecondaryBanner/SecondaryBanner';
-
-const fetchHomeData = async (currentLocale) => {
-  const { cms } = App.getInstance();
-  const [homeData] = await Promise.all([cms.getHome(currentLocale)]);
-
-  return {
-    props: {
-      homeData: {
-        ...homeData
-      }
-    }
-  };
-};
+import mockSecondaryBanner from '@__mocks__/secondaryBanner/secondaryBanner';
 
 const Home = ({ homeData }) => {
   const { header, popup, votes, secondaryBanner, footer } = homeData;
@@ -48,7 +40,27 @@ const Home = ({ homeData }) => {
   );
 };
 
-export const getServerSideProps = async () => fetchHomeData(cmsLocales.en);
+export const getServerSideProps = () => {
+  const homeData = {
+    header: {
+      accessBar: mockAccessBar,
+      banner: mockBanner,
+      closingBar: mockClosingBar
+    },
+    popup: mockPopup,
+    votes: mockVotes,
+    secondaryBanner: mockSecondaryBanner,
+    footer: mockFooter
+  };
+
+  return {
+    props: {
+      homeData: {
+        ...homeData
+      }
+    }
+  };
+};
 
 Home.propTypes = {
   homeData: PropTypes.shape({

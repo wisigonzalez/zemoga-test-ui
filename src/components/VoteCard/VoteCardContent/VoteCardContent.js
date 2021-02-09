@@ -12,7 +12,6 @@ import Thumb from '@components/Thumb/Thumb';
 import VoteCardActions from '@components/VoteCardActions/VoteCardActions';
 
 const VoteCardContent = ({
-  id,
   title,
   subtitle,
   complement,
@@ -35,13 +34,7 @@ const VoteCardContent = ({
         <StyledComplement>{complement}</StyledComplement>
       </StyledAdditionalInfo>
       <StyledDescription>{description}</StyledDescription>
-      <VoteCardActions
-        voteNow={voteNow}
-        voteAgain={voteAgain}
-        id={id}
-        likeVotes={likeVotes}
-        dislikeVotes={dislikeVotes}
-      />
+      <VoteCardActions voteNow={voteNow} voteAgain={voteAgain} />
     </StyledContainer>
   );
 };
