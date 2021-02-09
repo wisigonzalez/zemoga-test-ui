@@ -51,8 +51,8 @@ Explanation of hierarchies in files and layers.
           ├── __tests__/                   # Tests folder
           ├── assets/                      # Core assets folder
           |   ├── styles/                  
-          │   ├── core/                    # Core utils folder
-          |   ├── themes/                  # Core styles folder
+          │       ├── core/                # Core utils folder
+          |       ├── themes/              # Core styles folder
           ├── components/                  # Components folder
           ├── config/
           |   ├── boot-loaders/            # Boot loaders folder
