@@ -4,7 +4,7 @@ Test ui repository >>> https://github.com/zemoga/ui-test
 
 Markup page >>> https://s3-us-west-2.amazonaws.com/zemoga-files/ui/candidates-test/test-ui-v2.png
 
-DEMO URL: https://zemoga-test-ui.wisigonzalez.vercel.app/
+DEMO URL >>> https://zemoga-test-ui.wisigonzalez.vercel.app/
 
 ## Stack
 
