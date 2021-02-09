@@ -77,6 +77,8 @@ Explanation of hierarchies in files and layers.
 
 - The successful voting message does not work. This I did not do due to lack of time.
 
+- If you want to verify the translations of the CMS, go to the index.js file in the pages folder and modify the parameter cmsLocales.en by cmsLocales.es
+
 # License
 
 MIT
